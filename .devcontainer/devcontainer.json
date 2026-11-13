@@ -1,0 +1,11 @@
+{
+  "name": "xpra-browser",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "runArgs": ["--shm-size=1g"],
+  "forwardPorts": [10000],
+  "portsAttributes": {
+    "10000": { "label": "browser" }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start-xpra.sh"
+}
